@@ -11,14 +11,10 @@ export default function Workshop() {
   const workshops = data["workshops"];
 
   return (
-    <div
-      className={`bg-muted flex flex-col min-h-svh gap-8 px-4 md:px-10 pb-32 ${styles.background} text-white w-full overflow-x-hidden relative`}
-    >
-      <div className="absolute inset-0 z-0 opacity-50 mask-[radial-gradient(ellipse_at_center,transparent_20%,white_100%)] pointer-events-none">
-        <svg
-          className="absolute inset-0 h-full w-full text-white"
-          aria-hidden="true"
-        >
+    <div className={`bg-[#05020a] flex flex-col min-h-svh gap-8 px-4 md:px-10 pb-32 ${styles.background} text-white w-full overflow-x-hidden relative`}>
+      {/* Background Decorative Grid - Changed text-white to a muted purple color rule */}
+      <div className="absolute inset-0 z-0 opacity-25 mask-[radial-gradient(ellipse_at_center,transparent_20%,white_100%)] pointer-events-none">
+        <svg className="absolute inset-0 h-full w-full text-purple-900/40" aria-hidden="true">
           <defs>
             <pattern
               id="grid"
@@ -37,7 +33,9 @@ export default function Workshop() {
           <rect width="100%" height="100%" fill="url(#grid)"></rect>
         </svg>
       </div>
-      <h1 className="race font-bold text-5xl md:text-7xl text-center mb-12 mt-[15vh] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 w-full uppercase">
+
+      {/* Heading with a sleek white-to-purple gradient shift */}
+      <h1 className="race font-bold text-5xl md:text-7xl text-center mb-12 mt-[15vh] bg-clip-text text-transparent bg-gradient-to-b from-white via-purple-200 to-purple-500 w-full uppercase tracking-wider">
         WORKSHOPS
       </h1>
 
